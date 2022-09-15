@@ -38,7 +38,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <button>Download</button>
+          <button data-test-id="generate-meme">Download</button>
         </a>
       </header>
       <label>
