@@ -1,4 +1,5 @@
 import './App.css';
+import fileSaver from 'file-saver';
 import { useState } from 'react';
 
 // import { load } from 'cheerio';
@@ -8,8 +9,9 @@ function App() {
 
   const [topText, setTopText] = useState('_');
   const [bottomText, setBottomText] = useState('_');
-  // const [fullMemeUrl, setFullMemeUrl] = useState(
-  //   'https://api.memegen.link/images/aag.png',);
+  /* const [fullMemeUrl, setFullMemeUrl] = useState(
+    'https://api.memegen.link/images/aag.png',
+  ); */
   const fullMemeUrl =
     'https://api.memegen.link/images/' +
     template +
@@ -18,6 +20,9 @@ function App() {
     '/' +
     bottomText +
     '.png';
+  const saveFile = () => {
+    fileSaver.saveAs(fullMemeUrl, 'image.jpg');
+  };
 
   return (
     <div className="App">
@@ -32,14 +37,15 @@ function App() {
           Edit <code>the meme</code> and save to reload.
         </p>
 
-        <a
+        {/* <a
           className="App-link"
           href={fullMemeUrl}
           target="_blank"
           rel="noopener noreferrer"
-        >
-          <button data-test-id="generate-meme">Download</button>
-        </a>
+        ></a> */}
+        <button data-test-id="generate-meme" onClick={saveFile}>
+          Download
+        </button>
       </header>
       <label>
         Top text
