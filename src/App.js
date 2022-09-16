@@ -21,7 +21,7 @@ function App() {
     bottomText +
     '.png';
   const saveFile = () => {
-    fileSaver.saveAs(fullMemeUrl, 'image.jpg');
+    fileSaver.saveAs(fullMemeUrl, fullMemeUrl);
   };
 
   return (
