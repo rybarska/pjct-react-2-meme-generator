@@ -15,6 +15,7 @@ function App() {
     'https://api.memegen.link/images/' +
     template +
     '/' +
+    ' ' +
     topText +
     '/' +
     bottomText +
@@ -32,9 +33,7 @@ function App() {
           alt="meme"
           data-test-id="meme-image"
         />
-        <p>
-          Edit <code>the meme</code> and save to reload.
-        </p>
+        <p>Edit the meme and save to reload.</p>
 
         {/* <a
           className="App-link"
@@ -52,7 +51,7 @@ function App() {
         <br />
         <input
           // 2. Use state variable (connect it to the input)
-          value={topText} // {colorLuminosity}
+          value={topText}
           // 3. Update the state variable when the user types something
           onChange={(event) => {
             setTopText(event.currentTarget.value);
@@ -67,7 +66,7 @@ function App() {
         <br />
         <input
           // 2. Use state variable (connect it to the input)
-          value={bottomText} // {colorLuminosity}
+          value={bottomText}
           // 3. Update the state variable when the user types something
           onChange={(event) => {
             setBottomText(event.currentTarget.value);
