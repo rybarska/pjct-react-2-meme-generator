@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 function App() {
   const [template, setTemplate] = useState('aag');
-  const [topText, setTopText] = useState(' ');
+  const [topText, setTopText] = useState('');
   const [bottomText, setBottomText] = useState('');
   const fullMemeUrl = encodeURI(
     'https://api.memegen.link/images/' +
