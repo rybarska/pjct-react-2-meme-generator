@@ -15,10 +15,9 @@ function App() {
     'https://api.memegen.link/images/' +
     template +
     '/' +
-    ' ' +
-    topText +
+    encodeURIComponent(topText) +
     '/' +
-    bottomText +
+    encodeURIComponent(bottomText) +
     '.png';
   const saveFile = () => {
     fileSaver.saveAs(fullMemeUrl, fullMemeUrl);
