@@ -6,19 +6,17 @@ import { useState } from 'react';
 
 function App() {
   const [template, setTemplate] = useState('aag');
-  const [topText, setTopText] = useState('');
+  const [topText, setTopText] = useState(' ');
   const [bottomText, setBottomText] = useState('');
-  /* const [fullMemeUrl, setFullMemeUrl] = useState(
-    'https://api.memegen.link/images/aag.png',
-  ); */
-  const fullMemeUrl =
+  const fullMemeUrl = encodeURI(
     'https://api.memegen.link/images/' +
-    template +
-    '/' +
-    encodeURIComponent(topText) +
-    '/' +
-    encodeURIComponent(bottomText) +
-    '.png';
+      template +
+      '/' +
+      encodeURIComponent(topText) +
+      '/' +
+      encodeURIComponent(bottomText) +
+      '.png',
+  );
   const saveFile = () => {
     fileSaver.saveAs(fullMemeUrl, fullMemeUrl);
   };
