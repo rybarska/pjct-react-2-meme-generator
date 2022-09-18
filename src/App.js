@@ -12,7 +12,6 @@ function App() {
     'https://api.memegen.link/images/' +
       template +
       '/' +
-      '~n' +
       encodeURIComponent(topText) +
       '/' +
       encodeURIComponent(bottomText) +
