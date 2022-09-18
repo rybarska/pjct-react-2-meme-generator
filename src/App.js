@@ -6,9 +6,8 @@ import { useState } from 'react';
 
 function App() {
   const [template, setTemplate] = useState('aag');
-
-  const [topText, setTopText] = useState(' ');
-  const [bottomText, setBottomText] = useState(' ');
+  const [topText, setTopText] = useState('');
+  const [bottomText, setBottomText] = useState('');
   /* const [fullMemeUrl, setFullMemeUrl] = useState(
     'https://api.memegen.link/images/aag.png',
   ); */
@@ -16,8 +15,10 @@ function App() {
     'https://api.memegen.link/images/' +
     template +
     '/' +
+    '_' +
     topText +
     '/' +
+    '_' +
     bottomText +
     '.png';
   const saveFile = () => {
