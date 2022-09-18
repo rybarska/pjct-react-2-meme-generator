@@ -12,7 +12,6 @@ function App() {
     'https://api.memegen.link/images/' +
       template +
       '/' +
-      encodeURIComponent(' ') +
       encodeURIComponent(topText) +
       '/' +
       encodeURIComponent(bottomText) +
@@ -33,12 +32,6 @@ function App() {
         />
         <p>Edit the meme and save to reload.</p>
 
-        {/* <a
-          className="App-link"
-          href={fullMemeUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-        ></a> */}
         <button data-test-id="generate-meme" onClick={saveFile}>
           Download
         </button>
