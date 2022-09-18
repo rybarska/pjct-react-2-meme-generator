@@ -15,10 +15,8 @@ function App() {
     'https://api.memegen.link/images/' +
     template +
     '/' +
-    '_' +
     topText +
     '/' +
-    '_' +
     bottomText +
     '.png';
   const saveFile = () => {
