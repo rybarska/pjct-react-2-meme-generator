@@ -6,12 +6,13 @@ import { useState } from 'react';
 
 function App() {
   const [template, setTemplate] = useState('aag');
+  const [spacer, setSpacer] = useState('');
   const [topText, setTopText] = useState('');
   const [bottomText, setBottomText] = useState('');
   const fullMemeUrl = encodeURI(
     'https://api.memegen.link/images/' +
       template +
-      '/' +
+      spacer +
       encodeURIComponent(topText) +
       '/' +
       encodeURIComponent(bottomText) +
@@ -43,9 +44,11 @@ function App() {
         <input
           // 2. Use state variable (connect it to the input)
           value={topText}
+          name="/"
           // 3. Update the state variable when the user types something
           onChange={(event) => {
             setTopText(event.currentTarget.value);
+            setSpacer(event.currentTarget.name);
           }}
         />
       </label>
