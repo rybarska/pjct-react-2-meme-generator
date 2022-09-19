@@ -12,9 +12,9 @@ function App() {
     'https://api.memegen.link/images/' +
       template +
       '/' +
-      encodeURIComponent(topText) +
+      (topText == '' ? '__' : encodeURIComponent(topText)) +
       '/' +
-      encodeURIComponent(bottomText) +
+      (bottomText == '' ? '__' : encodeURIComponent(bottomText)) +
       '.png',
   );
   const saveFile = () => {
