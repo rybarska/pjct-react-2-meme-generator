@@ -8,17 +8,15 @@ function App() {
   const [template, setTemplate] = useState('aag');
   const [topText, setTopText] = useState('');
   const [bottomText, setBottomText] = useState('');
-  const fullMemeUrl = `https://api.memegen.link/images/${template}/${topText}%20/${bottomText}%20.png`;
-  /* const fullMemeUrl = encodeURI(
+  const fullMemeUrl = encodeURI(
     'https://api.memegen.link/images/' +
       template +
       '/' +
       encodeURIComponent(topText) +
-      ' ' +
       '/' +
       encodeURIComponent(bottomText) +
       '.png',
-  ); */
+  );
   const saveFile = () => {
     fileSaver.saveAs(fullMemeUrl, fullMemeUrl);
   };
